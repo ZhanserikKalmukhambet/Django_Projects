@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %}
+
+{% block title %} CreateList {% endblock %}
+
+<div>
+    {% block content %}
+        Create a new list - PAGE
+        <form action="/create/" method="post">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button type="submit">create</button>
+        </form>
+    {% endblock %}
+</div>
